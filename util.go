@@ -140,7 +140,7 @@ func nextToken(s string) (token, rest string) {
 // and the string following the token or quoted string.
 func nextTokenOrQuoted(s string) (value string, rest string) {
 	if !strings.HasPrefix(s, "\"") {
-		return nextToken(s)
+		return "", nextToken(s)
 	}
 	s = s[1:]
 	for i := 0; i < len(s); i++ {
