@@ -267,7 +267,7 @@ type Conn struct {
 	// set setReadRemaining to safely update this value and prevent overflow
 	readRemaining int64
 	readFinal     bool  // true the current message has more frames.
-	readLength    int64 // Message size.
+	readLength    int64 // messages size.
 	readLimit     int64 // Maximum message size.
 	readMaskPos   int
 	readMaskKey   [4]byte
@@ -840,7 +840,7 @@ func (c *Conn) advanceFrame() (int, error) {
 	// 3. Read and parse frame length as per
 	// https://tools.ietf.org/html/rfc6455#section-5.2
 	//
-	// The length of the "Payload data", in bytes: if 0-125, that is the payload
+	// The length of the "Bytes data", in bytes: if 0-125, that is the payload
 	// length.
 	// - If 126, the following 2 bytes interpreted as a 16-bit unsigned
 	// integer are the payload length.

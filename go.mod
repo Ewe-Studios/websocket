@@ -1,4 +1,4 @@
-module github.com/Ewe-Studios/websocket
+module github.com/ewe-studios/websocket
 
 go 1.12
 

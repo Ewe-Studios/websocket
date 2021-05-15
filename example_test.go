@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gorilla/websocket"
+	"github.com/Ewe-Studios/websocket"
 )
 
 var (
@@ -40,6 +40,6 @@ func ExampleIsUnexpectedCloseError() {
 
 func processMessage(mt int, p []byte) {}
 
-// TestX prevents godoc from showing this entire file in the example. Remove
+// TestX prevents godoc from showing this entire file in the example. remove
 // this function when a second example is added.
 func TestX(t *testing.T) {}
